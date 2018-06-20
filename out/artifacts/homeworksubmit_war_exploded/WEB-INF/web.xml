@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://JAVA.sun.com/xml/ns/javaee 
+	http://JAVA.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name></display-name>
+
+<!-- 配置登陆过滤器 -->
+    <filter>
+        <filter-name>login</filter-name>
+        <filter-class>Filter.LoginFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>login</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+	<servlet>
+		<servlet-name>ServletConfigureator</servlet-name>
+		<servlet-class>org.logicalcobwebs.proxool.configuration.ServletConfigurator</servlet-class>
+		<init-param>
+			<param-name>xmlFile</param-name>
+			<param-value>WEB-INF/proxool.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>Admin</servlet-name>
+		<servlet-class>org.logicalcobwebs.proxool.admin.servlet.AdminServlet</servlet-class>
+
+
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>servlet.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>register</servlet-name>
+    <servlet-class>servlet.Register</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowHomework</servlet-name>
+    <servlet-class>servlet.ShowHomework</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>HomeworkSubmit</servlet-name>
+    <servlet-class>servlet.HomeworkSubmit</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddNewWork</servlet-name>
+    <servlet-class>servlet.AddNewWork</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ListHomeworksByTeacherId</servlet-name>
+    <servlet-class>servlet.ListHomeworksByTeacherId</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ListContentByHomeworkId</servlet-name>
+    <servlet-class>servlet.ListContentByHomeworkId</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>test</servlet-name>
+    <display-name>lay name</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>servlet.test</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteHomeworkStudent</servlet-name>
+    <display-name>Te display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>servlet.DeleteHomeworkStudent</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateHomeworkScore</servlet-name>
+    <servlet-class>servlet.UpdateHomeworkScore</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateHomeworkStudent</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>servlet.UpdateHomeworkStudent</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteHomework</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>servlet.DeleteHomework</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateHomework</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>servlet.UpdateHomework</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateUserInfo</servlet-name>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <description>This is the description of my J2EE component</description>
+    <servlet-class>servlet.UpdateUserInfo</servlet-class>
+  </servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>Admin</servlet-name> 
+		<url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/servlet/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>register</servlet-name>
+    <url-pattern>/servlet/registe</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowHomework</servlet-name>
+    <url-pattern>/servlet/ShowHomework</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HomeworkSubmit</servlet-name>
+    <url-pattern>/servlet/HomeworkSubmit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddNewWork</servlet-name>
+    <url-pattern>/servlet/AddNewWork</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListHomeworksByTeacherId</servlet-name>
+    <url-pattern>/servlet/ListHomeworksByTeacherId</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListContentByHomeworkId</servlet-name>
+    <url-pattern>/servlet/ListContentByHomeworkId</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>test</servlet-name>
+    <url-pattern>/servlet/test</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteHomeworkStudent</servlet-name>
+    <url-pattern>/servlet/DeleteHomeworkStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateHomeworkScore</servlet-name>
+    <url-pattern>/servlet/UpdateHomeworkScore</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateHomeworkStudent</servlet-name>
+    <url-pattern>/servlet/UpdateHomeworkStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteHomework</servlet-name>
+    <url-pattern>/servlet/DeleteHomework</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateHomework</servlet-name>
+    <url-pattern>/servlet/UpdateHomework</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateUserInfo</servlet-name>
+    <url-pattern>/servlet/UpdateUserInfo</url-pattern>
+  </servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	
+	
+</web-app>
